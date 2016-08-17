@@ -1,0 +1,2 @@
+class Convertidor < ApplicationRecord
+end
