@@ -1,2 +1,2 @@
-require './convertidors_helper'
+#require './convertidors_helper'
 
