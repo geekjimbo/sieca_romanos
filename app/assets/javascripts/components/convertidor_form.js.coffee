@@ -16,7 +16,7 @@
     $.ajax
       method: 'GET'
       #url: "ingestionrequest/#{ @props.ingestion.id }"
-      url: "http://localhost:7777/convertidors/new"
+      url: "/convertidors/new"
       datatype: 'JSON'
       data:
         convertidor: @state
