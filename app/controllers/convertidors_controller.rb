@@ -11,6 +11,7 @@ class ConvertidorsController < ApplicationController
     romano = params["convertidor"]["arabigo"]
     @convertidor.romano = convert_to_roman romano
     @convertidor.save!
+    @romano = @convertidor.romano
     redirect_to action: "index"
   end
 
