@@ -9,7 +9,8 @@ class ConvertidorsController < ApplicationController
   def new
     @convertidor = Convertidor.find 1
     arabigo = params["convertidor"]["arabigo"]
-    @convertidor.romano = convert arabigo  #convert_to_roman arabigo
+    @convertidor.romano = convert arabigo.to_i  #convert_to_roman arabigo
+    @convertidor.romano = "El número arábigo #{arabigo} convertido a Romano: #{@convertidor.romano}"
     @convertidor.save!
     @romano = @convertidor.romano
     redirect_to action: "index"
