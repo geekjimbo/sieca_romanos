@@ -9,7 +9,7 @@ class ConvertidorsController < ApplicationController
   def new
     @convertidor = Convertidor.find 1
     arabigo = params["convertidor"]["arabigo"]
-    @convertidor.romano = convert arabigo.to_i  #convert_to_roman arabigo
+    @convertidor.romano = convert_to_roman arabigo
     @convertidor.romano = "El número arábigo #{arabigo} convertido a Romano: #{@convertidor.romano}"
     @convertidor.save!
     @romano = @convertidor.romano
@@ -20,6 +20,6 @@ class ConvertidorsController < ApplicationController
 
     def convert_to_roman(in_arabic)
       resultado = "... todavía no hay de piña" # aquí hay que implementar el convertidor
-      "El resultado arábigo #{in_arabic} convertido a Romano es: #{resultado}"
+      resultado
     end
 end
