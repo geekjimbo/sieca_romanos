@@ -1,5 +1,3 @@
-#module ConvertidorsHelper
-
 def convert(in_arabic)
   return "" if in_arabic == 0
   arabic, roman = convert_factors(in_arabic)
@@ -16,5 +14,3 @@ ARABIC_FACTORS = [
 def convert_factors(in_arabic)
   ARABIC_FACTORS.find {|arabic, _| arabic <= in_arabic}
 end
-
-#end

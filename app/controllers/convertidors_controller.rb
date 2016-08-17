@@ -1,4 +1,5 @@
 class ConvertidorsController < ApplicationController
+  include ConvertidorsHelper
 
   def index
     @convertidor = Convertidor.find 1
